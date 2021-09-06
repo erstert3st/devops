@@ -49,7 +49,7 @@ kubectl create namespace jenkins
 sudo microk8s.kubectl proxy --accept-hosts=.* --address=0.0.0.0 &
 
 sudo microk8s.kubectl edit deployment/kubernetes-dashboard — namespace=kubernetes-dashboard
-# ? - --enable-skip-login
+# ? - --enable-skip-login 
 
 
 
