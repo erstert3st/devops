@@ -3,7 +3,6 @@ kind: Service
 metadata:
   name: jenkins
   namespace: jenkins
-
 spec:
   type: NodePort
   ports:
