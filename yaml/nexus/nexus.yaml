@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nexus
+  namespace: nexus
 spec:
   replicas: 1
   selector:
@@ -15,7 +16,7 @@ spec:
       volumes:
         - name: nexus-data
           persistentVolumeClaim:
-            claimName: nexus-claim2
+            claimName: nexus-claim
       containers:
         - name: nexus
           image: localhost:32000/sonatype4
