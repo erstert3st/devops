@@ -12,6 +12,10 @@ spec:
       labels:
         app: jenkins
     spec:
+      volumes:
+        - name: jenkins-home
+          persistentVolumeClaim:
+            claimName: nexus-claim2  
       containers:
       - name: jenkins
         image: jenkins/jenkins:lts
@@ -21,6 +25,3 @@ spec:
 volumeMounts:
           - name: jenkins-home
             mountPath: /var/jenkins_home
-      volumes:
-        - name: jenkins-home
-          emptyDir: {}
