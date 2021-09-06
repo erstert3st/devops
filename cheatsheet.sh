@@ -42,7 +42,7 @@ sudo microk8s status --wait-ready
 sudo microk8s enable dns dashboard
 
 kubectl apply -f nexus-volume.yaml 
-
+#
 kubectl create namespace jenkins
 
 # proxy 
