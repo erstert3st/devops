@@ -18,20 +18,20 @@ spec:
             fsGroup: 1000 
             runAsUser: 1000
       volumes:
-        - name: jenkins-home
+        - name: jenkins-data
           persistentVolumeClaim:
             claimName: jenkins-claim       
       containers:
         - name: jenkins
           image: jenkins/jenkins:lts
-        imagePullPolicy: IfNotPresent          
+          imagePullPolicy: IfNotPresent          
           resources:
             limits:
               memory: "2Gi"
               cpu: "1000m"
             requests:
-              memory: "500Mi"
-              cpu: "500m"
+              memory: "200Mi"
+              cpu: "100m"
           ports:
             - name: httpport
               containerPort: 8080

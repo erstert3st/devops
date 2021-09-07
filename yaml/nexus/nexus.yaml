@@ -26,8 +26,8 @@ spec:
               memory: "4Gi"
               cpu: "1000m"
             requests:
-              memory: "2Gi"
-              cpu: "500m"
+              memory: "200Mi"
+              cpu: "100m"
           ports:
             - containerPort: 8081
           volumeMounts:

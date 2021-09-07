@@ -1,3 +1,4 @@
+#https://devopscube.com/jenkins-build-agents-kubernetes/
 #dont be stur & lass bei fehler mal 5 minuten zeit oder reboot
 
 #       ██╗         ██╗    ███╗   ██╗    ██╗   ██╗    ██╗  ██╗     # 
@@ -99,6 +100,25 @@ git push
 # update
   git pull origin main
 
+                                                                          
+                                                                     
+                                                                     
+#      ██╗  ██╗    ████████╗    ████████╗    ██████╗     ███████╗        ██╗     #
+#      ██║  ██║    ╚══██╔══╝    ╚══██╔══╝    ██╔══██╗    ██╔════╝       ██╔╝     #
+#      ███████║       ██║          ██║       ██████╔╝    ███████╗      ██╔╝      #
+#      ██╔══██║       ██║          ██║       ██╔═══╝     ╚════██║     ██╔╝       #
+#      ██║  ██║       ██║          ██║       ██║         ███████║    ██╔╝        #
+#      ╚═╝  ╚═╝       ╚═╝          ╚═╝       ╚═╝         ╚══════╝    ╚═╝         #
+                                                                     
+
+#      ███╗   ███╗    ██╗   ██╗    ███████╗     ██████╗     ██╗          #
+#      ████╗ ████║    ╚██╗ ██╔╝    ██╔════╝    ██╔═══██╗    ██║          #
+#      ██╔████╔██║     ╚████╔╝     ███████╗    ██║   ██║    ██║          #
+#      ██║╚██╔╝██║      ╚██╔╝      ╚════██║    ██║▄▄ ██║    ██║          #
+#      ██║ ╚═╝ ██║       ██║       ███████║    ╚██████╔╝    ███████╗     #
+#      ╚═╝     ╚═╝       ╚═╝       ╚══════╝     ╚══▀▀═╝     ╚══════╝     #
+                                                                    
+
 
 #     ███╗   ███╗     █████╗      ██████╗         ██████╗     ███████╗     # 
 #     ████╗ ████║    ██╔══██╗    ██╔════╝        ██╔═══██╗    ██╔════╝     #  
@@ -122,3 +142,6 @@ brew install nmap
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
 #todo new path command
 choco install googlechrome firefox jdk8 notepadplusplus.install 7zip.install vlc python3 git.install nodejs.install putty.install vscode winscp.install spotify
+
+
+
