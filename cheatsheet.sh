@@ -1,4 +1,4 @@
-
+#dont be stur & lass bei fehler mal 5 minuten zeit oder reboot
 
 #       ██╗         ██╗    ███╗   ██╗    ██╗   ██╗    ██╗  ██╗     # 
 #       ██║         ██║    ████╗  ██║    ██║   ██║    ╚██╗██╔╝     # 
