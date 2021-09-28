@@ -19,8 +19,11 @@ spec:
             claimName: nexus-claim
       containers:
         - name: nexus
-          image: localhost:32000/sonatype4
+          image: bradbeck/nexus-https
           imagePullPolicy: IfNotPresent
+          env:
+          - name: PRIVATE_KEY_PASSWORD
+            value: "123456789"        
           resources:
             limits:
               memory: "4Gi"
