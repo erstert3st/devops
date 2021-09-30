@@ -23,7 +23,7 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
           - name: PRIVATE_KEY_PASSWORD
-            value: "123456789"        
+            value: "123456789"   
           resources:
             limits:
               memory: "4Gi"
