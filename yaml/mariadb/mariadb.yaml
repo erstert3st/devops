@@ -3,31 +3,32 @@ kind: Deployment
 metadata:
   name: mysql
   namespace: mariadb
+  labels:
+    app: mysql
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: mysql
-  strategy:
-    type: Recreate
   template:
     metadata:
       labels:
         app: mysql
     spec:
       containers:
-      - image: mysql:5.6
-        name: mysql
-        env:
-          # Use secret in real usage
-        - name: MYSQL_ROOT_PASSWORD
-          value: password
-        ports:
-        - containerPort: 3306
-          name: mysql
-        volumeMounts:
-        - name: mariadb-volume
-          mountPath: /var/lib/mysql
+        - name: mysql
+          image: mysql:5.7
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - mountPath: "/var/lib/mysql"
+              subPath: "mysql"
+              name: mariadb-volume
+            env:
+              # Use secret in real usage
+            - name: MYSQL_ROOT_PASSWORD
+              value: password
       volumes:
-      - name: mariadb-volume
-        persistentVolumeClaim:
-          claimName: mariadb-claim
+        - name: mariadb-volume
+          persistentVolumeClaim:
+            claimName: maria-claim
