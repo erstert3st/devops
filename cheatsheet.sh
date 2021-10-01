@@ -54,7 +54,7 @@ sudo docker pull #--registry
 # ██║  ██╗    ╚██████╔╝    ██████╔╝    ███████╗    ██║  ██║    ██║ ╚████║    ███████╗       ██║       ███████╗    ███████║     #
 # ╚═╝  ╚═╝     ╚═════╝     ╚═════╝     ╚══════╝    ╚═╝  ╚═╝    ╚═╝  ╚═══╝    ╚══════╝       ╚═╝       ╚══════╝    ╚══════╝     #
                                                                                                                                                                                                                                  
-# http://10.0.0.11:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login     
+# http://10.0.0.18:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/#/login     
 sudo microk8s status --wait-ready
 
 sudo microk8s enable dns dashboard

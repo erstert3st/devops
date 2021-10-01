@@ -19,16 +19,16 @@ spec:
         - name: mysql
           image: mysql:5.7
           ports:
-            - containerPort: 3306
+          - containerPort: 3306
           volumeMounts:
-            - mountPath: "/var/lib/mysql"
-              subPath: "mysql"
-              name: mariadb-volume
-            env:
-              # Use secret in real usage
-            - name: MYSQL_ROOT_PASSWORD
-              value: password
+          - mountPath: "/var/lib/mysql"
+            subPath: "mysql"
+            name: mariadb-volume
+          env:
+          - name: MYSQL_ROOT_PASSWORD
+            value: password
       volumes:
         - name: mariadb-volume
           persistentVolumeClaim:
             claimName: maria-claim
+         
