@@ -26,8 +26,8 @@ spec:
           image: jenkins/jenkins:latest
           imagePullPolicy: IfNotPresent
           env:
-          - name: JAVA_OPTS
-            value: "--httpPort=8080 --httpsPort=443 --httpsKeyStore=path/to/keystore --httpsKeyStorePassword=password"          
+          - name: JENKINS_OPTS
+            value: "--httpPort=8080 --httpsPort=443 --httpsCertificate=/var/jenkins_home/ssl/cacert.pem --httpsPrivateKey=/var/jenkins_home/ssl/cakey.pem      
           resources:
             limits:
               memory: "2Gi"
@@ -39,7 +39,7 @@ spec:
             - name: http
               containerPort: 8080
             - name: https
-              containerPort: 50000
+              containerPort: 443
           livenessProbe:
             httpGet:
               path: "/login"

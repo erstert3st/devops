@@ -19,4 +19,4 @@ spec:
     - name: https
       port: 443
       targetPort: 443
-      nodePort: 32010
+      nodePort: 32020
