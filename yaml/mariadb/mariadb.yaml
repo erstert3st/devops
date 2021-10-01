@@ -1,34 +1,32 @@
+# PostgreSQL StatefulSet
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
-  name: mysql
+  name: postgresql-db
   namespace: mariadb
-  labels:
-    app: mysql
 spec:
-  replicas: 1
+  serviceName: postgresql-db-service
   selector:
     matchLabels:
-      app: mysql
+      app: postgresql-db
+  replicas: 2
   template:
     metadata:
       labels:
-        app: mysql
+        app: postgresql-db
     spec:
       containers:
-        - name: mysql
-          image: mysql:5.7
-          ports:
-          - containerPort: 3306
+        - name: postgresql-db
+          image: postgres:latest
           volumeMounts:
-          - mountPath: "/var/lib/mysql"
-            subPath: "mysql"
-            name: mariadb-volume
+            - name: mariadb-volume
+              mountPath: /data
           env:
-          - name: MYSQL_ROOT_PASSWORD
-            value: password
+            - name: POSTGRES_PASSWORD
+              value: testpassword
+            - name: PGDATA
+              value: /data/pgdata
       volumes:
         - name: mariadb-volume
           persistentVolumeClaim:
-            claimName: maria-claim
-         
+            claimName: mariadb-claim

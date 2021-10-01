@@ -23,7 +23,7 @@ spec:
             claimName: jenkins-claim       
       containers:
         - name: jenkins
-          image: jenkins/jenkins:lts
+          image: jenkins/jenkins:latest
           imagePullPolicy: IfNotPresent
           env:
           - name: JAVA_OPTS
