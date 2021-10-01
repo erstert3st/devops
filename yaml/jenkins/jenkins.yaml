@@ -27,7 +27,7 @@ spec:
           imagePullPolicy: IfNotPresent
           env:
           - name: JAVA_OPTS
-            value: "--httpPort=-1 --httpsPort=443 --httpsKeyStore=path/to/keystore --httpsKeyStorePassword=keystorePassword"          
+            value: "--httpPort=8080 --httpsPort=443 --httpsKeyStore=path/to/keystore --httpsKeyStorePassword=password"          
           resources:
             limits:
               memory: "2Gi"
@@ -36,9 +36,9 @@ spec:
               memory: "200Mi"
               cpu: "100m"
           ports:
-            - name: httpport
+            - name: http
               containerPort: 8080
-            - name: jnlpport
+            - name: https
               containerPort: 50000
           livenessProbe:
             httpGet:
@@ -59,7 +59,3 @@ spec:
           volumeMounts:
             - name: jenkins-data
               mountPath: /var/jenkins_home    
-
-
-
-              --env JAVA_OPTS=-Dhudson.footerURL=http://mycompany.com jenkins/jenkins:lts

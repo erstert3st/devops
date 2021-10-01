@@ -6,16 +6,17 @@ metadata:
   annotations:
       prometheus.io/scrape: 'true'
       prometheus.io/path:   /
-      prometheus.io/port:   '8080'
+      prometheus.io/port:   '443'
 spec:
   selector: 
     app: jenkins
   type: NodePort  
   ports:
-    - name: httpport
+    - name: http
       port: 8080
       targetPort: 8080
       nodePort: 32002
-    - name: jnlpport
-      port: 50000
-      targetPort: 50000
+    - name: https
+      port: 443
+      targetPort: 443
+      nodePort: 32010

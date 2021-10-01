@@ -11,7 +11,7 @@
 
 nano ~/.bash_aliases 
 # ? alias kubectl='microk8s kubectl'
-sudo chown 777 kubeStorage/
+sudo chown 777 -R kubeStorage/
 history 370 > txt
 
 snap refresh # update
@@ -61,7 +61,7 @@ sudo microk8s enable dns dashboard
 
 kubectl apply -f nexus-volume.yaml 
 #
-kubectl create namespace jenkins
+kubectl create namespace mariadb
 
 # proxy 
 sudo microk8s.kubectl proxy --accept-hosts=.* --address=0.0.0.0 &
