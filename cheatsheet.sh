@@ -1,6 +1,17 @@
 #https://devopscube.com/jenkins-build-agents-kubernetes/
 #dont be stur & lass bei fehler mal 5 minuten zeit oder reboot
 
+
+Python:
+
+Import: from octoprint.filemanager.util import StreamWrapper
+
+colored print : print('\x1b[6;30;42m' + 'me greeen ' + '\x1b[0m')
+
+for with iter : for itr, fileName in enumerate(fileNameList):or fileNameList.items ( <- dict)
+
+
+
 #       ██╗         ██╗    ███╗   ██╗    ██╗   ██╗    ██╗  ██╗     # 
 #       ██║         ██║    ████╗  ██║    ██║   ██║    ╚██╗██╔╝     # 
 #       ██║         ██║    ██╔██╗ ██║    ██║   ██║     ╚███╔╝      # 
