@@ -102,6 +102,7 @@ sudo microk8s.kubectl patch pv task-pv-volume -p '{"metadata": {"finalizers": nu
 git clone https://github.com/erstert3st/devops.git
 git add --all
 
+git config --global credential.helper '!f() { echo "username=token"; echo "password=x-oauth-basic"; }; f'
 
 # push
 git commit -m "first"
