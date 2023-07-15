@@ -43,17 +43,19 @@ docker images
 docker image rm alpine:3.4
 
 docker build --rm=true --tag=sonatype/nexus3- .
+docker build  -t spotifysync:1.0.0 "." --no-cache
+
 sudo docker exec -it nexus  /bin/bash
 docker ps 
 docker system prune -a
-
+docker run -it name /bin/bash
 docker container stop/kill
 
 cat ~/my_password.txt | docker login localhost:8080 --username foo --password-stdin
 sudo docker tag sonatype4 localhost:32000/sonatype4
 sudo docker push localhost:32000/sonatype4
 sudo docker pull #--registry
-
+ remove all container : docker rm -f $(docker ps -a -q)
 
 # etc/docker/daemon.json C:\ProgramData\docker\config\daemon.json
 
