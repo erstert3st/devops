@@ -1,6 +1,17 @@
 #https://devopscube.com/jenkins-build-agents-kubernetes/
 #dont be stur & lass bei fehler mal 5 minuten zeit oder reboot
 
+
+Python:
+
+Import: from octoprint.filemanager.util import StreamWrapper
+
+colored print : print('\x1b[6;30;42m' + 'me greeen ' + '\x1b[0m')
+
+for with iter : for itr, fileName in enumerate(fileNameList):or fileNameList.items ( <- dict)
+
+
+
 #       ██╗         ██╗    ███╗   ██╗    ██╗   ██╗    ██╗  ██╗     # 
 #       ██║         ██║    ████╗  ██║    ██║   ██║    ╚██╗██╔╝     # 
 #       ██║         ██║    ██╔██╗ ██║    ██║   ██║     ╚███╔╝      # 
@@ -16,7 +27,7 @@ history 370 > txt
 
 snap refresh # update
 
-
+0 12 * * SAT root apt update > /opt/logs/updateLogsOut.log && root apt upgrade -y >  /opt/logs/upgradeLogsOut.log  && root apt autoremove -y >  /opt/logs/autoremoveLogsOut.log  && root apt autoclean -y >  /opt/logs/autocleanLogsOut.log  
                                       
 #       ██████╗      ██████╗      ██████╗    ██╗  ██╗    ███████╗    ██████╗      #    
 #       ██╔══██╗    ██╔═══██╗    ██╔════╝    ██║ ██╔╝    ██╔════╝    ██╔══██╗     #         
@@ -32,17 +43,19 @@ docker images
 docker image rm alpine:3.4
 
 docker build --rm=true --tag=sonatype/nexus3- .
+docker build  -t spotifysync:1.0.0 "." --no-cache
+
 sudo docker exec -it nexus  /bin/bash
 docker ps 
 docker system prune -a
-
+docker run -it name /bin/bash
 docker container stop/kill
 
 cat ~/my_password.txt | docker login localhost:8080 --username foo --password-stdin
 sudo docker tag sonatype4 localhost:32000/sonatype4
 sudo docker push localhost:32000/sonatype4
 sudo docker pull #--registry
-
+ remove all container : docker rm -f $(docker ps -a -q)
 
 # etc/docker/daemon.json C:\ProgramData\docker\config\daemon.json
 
@@ -91,6 +104,7 @@ sudo microk8s.kubectl patch pv task-pv-volume -p '{"metadata": {"finalizers": nu
 git clone https://github.com/erstert3st/devops.git
 git add --all
 
+git config --global credential.helper '!f() { echo "username=token"; echo "password=x-oauth-basic"; }; f'
 
 # push
 git commit -m "first"
@@ -100,31 +114,7 @@ git push
 # update
   git pull origin main
 
-#         ██╗███████╗███╗   ██╗██╗  ██╗██╗███╗   ██╗███████╗
-#         ██║██╔════╝████╗  ██║██║ ██╔╝██║████╗  ██║██╔════╝
-#         ██║█████╗  ██╔██╗ ██║█████╔╝ ██║██╔██╗ ██║███████╗
-#    ██   ██║██╔══╝  ██║╚██╗██║██╔═██╗ ██║██║╚██╗██║╚════██║
-#    ╚█████╔╝███████╗██║ ╚████║██║  ██╗██║██║ ╚████║███████║
-#     ╚════╝ ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝╚══════╝
-                                                                                                                                     
-                                                                     
-                                                                     
-#      ██╗  ██╗    ████████╗    ████████╗    ██████╗     ███████╗        ██╗     #
-#      ██║  ██║    ╚══██╔══╝    ╚══██╔══╝    ██╔══██╗    ██╔════╝       ██╔╝     #
-#      ███████║       ██║          ██║       ██████╔╝    ███████╗      ██╔╝      #
-#      ██╔══██║       ██║          ██║       ██╔═══╝     ╚════██║     ██╔╝       #
-#      ██║  ██║       ██║          ██║       ██║         ███████║    ██╔╝        #
-#      ╚═╝  ╚═╝       ╚═╝          ╚═╝       ╚═╝         ╚══════╝    ╚═╝         #
-                                                                     
-
-#      ███╗   ███╗    ██╗   ██╗    ███████╗     ██████╗     ██╗          #
-#      ████╗ ████║    ╚██╗ ██╔╝    ██╔════╝    ██╔═══██╗    ██║          #
-#      ██╔████╔██║     ╚████╔╝     ███████╗    ██║   ██║    ██║          #
-#      ██║╚██╔╝██║      ╚██╔╝      ╚════██║    ██║▄▄ ██║    ██║          #
-#      ██║ ╚═╝ ██║       ██║       ███████║    ╚██████╔╝    ███████╗     #
-#      ╚═╝     ╚═╝       ╚═╝       ╚══════╝     ╚══▀▀═╝     ╚══════╝     #
-                                                                    
-
+                                                                  
 
 #     ███╗   ███╗     █████╗      ██████╗         ██████╗     ███████╗     # 
 #     ████╗ ████║    ██╔══██╗    ██╔════╝        ██╔═══██╗    ██╔════╝     #  
