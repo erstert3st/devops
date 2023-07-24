@@ -1,0 +1,45 @@
+name: Bewerbung - Kos Kilian
+
+on:
+  push
+
+jobs:
+  IT-Erfahrungen:
+    runs-on: ubuntu-latest
+    steps:
+      - name: C++
+        run: | 
+          echo '{ \
+          "Projekte": "altes Knapp WMS ALWIS/Marcogroup/Kisoft 1.0", \
+          "Erfahrung": "C++03 ,boost, WinForms , MUI , SConscripts", \
+          "Enwicklungen": "neue Arbeitsabfleufe, Sicherstellung von Abl?ufen, Mergen...", \
+          "Wo": "LOCOSO (Logistics Consulting & Solutions GmbH)" }'
+
+      - name: Python
+        run: | 
+          echo '{ \
+          "Projekte": "Octoprint Plugin, Music/Movie scraper", \
+          "Erfahrung": "Basics, pip/Poetry", \
+          "Wo": "Privat, Github: https://github.com/erstert3st" }'
+
+      - name: Html/Css/PHP
+        run: | 
+          echo '{ \ 
+          "Projekte": "Website with Login, Admin/User als LAP Projekt", \
+          "Erfahrung": "minimal Basics", \
+          "Wo": "LOCOSO/Berufsschule" }'
+
+      - name: Jenkins
+        run: | 
+          echo '{ \
+          "Continuous integration": "C++, C#, TypeScript, JAVA, Bash, Unit Tests", \
+          "Continuous deployment": "CleanUp, Nexus, Nuget, Maven, npm, container, Kubernetes, Test", \
+          "Wo": "LOCOSO" }'
+
+      - name: Infrastruktur
+        run: | 
+          echo '{ \
+          "Software": "VirtualBox, HyperV, Docker, Kubernetes, Nexus, Jenkins, TortoiseSVN, Github + Workflows, Visual Studio C++, VS Code", \
+          "Betriebsysteme": "Windows XP - 11, macOS, Debian, Redheat, Manjaro", \
+          "Sonstiges": "Server Hardware/Konfiguration, Bash Scripte, Userverwaltung WindowsDomaine + Linux, Samba/Kerberos, Oracle/Maria DB Https", \
+          "Dokumentation": "Anforderungsdokument, Technische Umsetzung, sourcecode Kommentare, SCRUM" }'
