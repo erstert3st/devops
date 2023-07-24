@@ -3,36 +3,36 @@
     " IT-Erfahrungen": [
       {"Webview": "https://github.com/erstert3st/devops/tree/main/Bewerbung"},
       {
-        "name": "C++",
+        "Name": "C++",
         "Projekte": "altes Knapp WMS ALWIS/Marcogroup/Kisoft 1.0",
-        "Erfahrung": "C++03 ,boost, WinForms , MUI , SConscripts",
-        "Enwicklungen": "neue Arbeitsabfleufe, Sicherstellung von Abl?ufen, Mergen...",
+        "Erfahrung": "C++03, boost, WinForms, MUI, SConscripts",
+        "Enwicklungen": "neue Arbeitsabl?ufe, Sicherstellung von Abl?ufen, Mergen...",
         "Wo": "LOCOSO (Logistics Consulting & Solutions GmbH)"
       },
       {
-        "name": "Python",
+        "Name": "Python",
         "Projekte": "Octoprint Plugin, Music/Movie scraper",
         "Erfahrung": "Basics, pip/Poetry",
-        "Wo": "Privat, Github: https://github.com/erstert3st"
+        "Wo": "Privat, GitHub: https://github.com/erstert3st"
       },
       {
-        "name": "Html/Css/PHP",
-        "Projekte": "Website with Login, Admin/User als LAP Projekt",
+        "Name": "Html/Css/PHP",
+        "Projekte": "Website mit Login - Admin/User als LAP Projekt",
         "Erfahrung": "minimal Basics",
         "Wo": "LOCOSO/Berufsschule"
       },
       {
-        "name": "Jenkins",
+        "Name": "Jenkins",
         "Continuous integration": "C++, C#, TypeScript, JAVA, Bash, Unit Tests",
         "Continuous deployment": "CleanUp, Nexus, Nuget, Maven, npm, container, Kubernetes, Test",
         "Wo": "LOCOSO"
       },
       {
-        "name": "Infrastruktur",
-        "Software": "VirtualBox, HyperV, Docker, Kubernetes, Nexus, Jenkins, TortoiseSVN, Github + Workflows, Visual Studio C++, VS Code",
-        "Betriebsysteme": "Windows XP - 11, macOS, Debian, Redhat, Manjaro",
-        "Sonstiges": "Server Hardware/Konfiguration, Bash Scripte, Userverwaltung WindowsDomaine + Linux, Samba/Kerberos, Oracle/Maria DB Https",
-        "Dokumentation": "Anforderungsdokument, Technische Umsetzung, sourcecode Kommentare, SCRUM"
+        "Name": "Infrastruktur",
+        "Software": "VirtualBox, HyperV, Docker, Kubernetes, Nexus, Jenkins, TortoiseSVN, GitHub + Workflows, Visual Studio C++, VS Code",
+        "Betriebssysteme": "Windows XP - 11, macOS, Debian, Redhat, Manjaro",
+        "Sonstiges": "Server Hardware/Konfiguration, Bash Skripte, Userverwaltung Windows-Domaine + Linux, Samba/Kerberos, Oracle/Maria DB Https",
+        "Dokumentation": "Anforderungsdokument, technische Umsetzung, Sourcecode Kommentare, SCRUM"
       }
     ]
   }
