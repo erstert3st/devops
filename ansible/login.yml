@@ -1,0 +1,93 @@
+---
+- name: Test SSH login
+  hosts: myhosts
+  gather_facts: no
+
+  tasks:
+    - name: Test SSH connectivity
+      ping:
+
+    - name: Create a text file on the remote host
+      file:
+        path: /home/user/pi.txt
+        state: touch
+
+    - name: Install python test
+      become: yes
+      become_user: root
+      raw: test -e /user/bin/python || (apt update && apt install python3-full -y)
+
+    - name: Install nano with test
+      become: yes
+      become_user: root
+      raw: test -e /usr/bin/nano || (apt update && apt install nano -y)
+
+    - name: Install k0s
+      become: yes
+      become_user: root
+      raw: test -e /usr/local/bin/k0s  || (curl -sSLf https://get.k0s.sh | sudo sh && sudo k0s install controller --enable-worker && sudo k0s start)
+
+    - name: Creates directory
+      become: yes
+      become_user: root
+      file:
+        path: /webserver
+        state: directory
+
+
+    - name: Creating a file with content
+      become: yes
+      become_user: root
+      copy:
+        dest: "/webserver/webserver.yml"
+        content: |
+          apiVersion: apps/v1
+          kind: Deployment
+          metadata:
+            name: nginx
+            labels:
+              app: nginx
+          spec:
+            replicas: 1
+            selector:
+              matchLabels:
+                app: nginx
+            template:
+              metadata:
+                labels:
+                  app: nginx
+              spec:
+                containers:
+                - name: nginx
+                  image: nginx
+                  ports:
+                  - containerPort: 80
+
+    - name: Creating a file with content
+      become: yes
+      become_user: root
+      copy:
+        dest: "/webserver/webserver-service.yml"
+        content: |
+          apiVersion: v1
+          kind: Service
+          metadata:
+            name: ngnix-service
+          spec:
+            selector:
+              app: nginx
+            type: NodePort
+            ports:
+            - protocol: TCP
+              port: 80
+              targetPort: 80
+
+    # - name: add server
+    #   become: yes
+    #   become_user: root
+    #   raw: k0s kubectl apply -f /webserver/webserver.yml
+
+    # - name: add service
+    #   become: yes
+    #   become_user: root
+    #   raw: k0s kubectl apply -f /webserver/webserver-service.yml

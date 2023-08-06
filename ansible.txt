@@ -1,0 +1,20 @@
+sudo apt update && sudo apt install -y software-properties-common && sudo add-apt-repository --yes --update ppa:ansible/ansible && sudo apt install -y ansible
+
+you need an hostfile:
+[myhosts]
+your_remote_host_ip_or_hostname
+
+you need an task file 
+---
+- name: Test SSH login
+  hosts: myhosts
+  gather_facts: no
+
+  tasks:
+    - name: Test  python3
+      raw: test -e /user/bin/python || (apt update && apt install python3-full -y)    
+launch with 
+ansible-playbook -i hosts copy_files.yml
+
+sudo visudo
+your_remote_username ALL=(ALL) NOPASSWD: ALL

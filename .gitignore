@@ -1,3 +1,4 @@
 keytool -genkey -keyalg RSA -alias alias -keystore identityKeystore.jks -storepass 123456789 -validity 360 -keysize 2048
 
 keytool -import -keystore identityKeystore.jks -file my_company_signedcert.pem -alias oiclient
+main copy.yml
